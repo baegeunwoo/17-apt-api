@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 SERVICE_KEY = os.getenv("SERVICE_KEY")
 
-def fetch_apt_trade(DEAL_YMD,LAWD_CD):
+def fetch_apt_trade(LAWD_CD,DEAL_YMD):
 
     URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
 
@@ -35,4 +35,4 @@ def fetch_apt_trade(DEAL_YMD,LAWD_CD):
         
         results.append(row)
 
-    print(results)
+    return results
